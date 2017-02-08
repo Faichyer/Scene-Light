@@ -1,0 +1,27 @@
+body{
+  background-image: url('Images/background.jpg');
+  background-size: 100%;
+  background-repeat: : no-repeat;
+}
+
+@font-face {
+    font-family: 'Amarillo';
+    src: url('Fonts/Amarillo.ttf') format('truetype');
+}
+@font-face { // Définition d'une nouvelle police
+    font-family: 'Rusard';
+    src:
+         url('Fonts/Ubuntu.ttf') format('truetype');
+
+}
+h2{
+  font-family: 'Rusard', Arial,serif;
+  color : teal;
+}
+h3{
+  font-family: 'Syncopate', Arial, serif;
+  color : teal;
+}
+.test{
+  font-family: 'Syncopate', Arial, serif;
+}

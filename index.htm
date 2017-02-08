@@ -1,0 +1,65 @@
+<html>
+
+<head>
+  <meta http-equiv='content-type' content='text/html; charset=UTF-8'>
+
+  <title>Arduino WEB</title>
+  <link type="text/css" rel="StyleSheet" href="my.css" />
+  <script>
+  function GetFlameState() {
+    nocache = "&nocache=" + Math.random() * 1000000;
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function() {
+      if ((this.readyState == 4) && (this.status == 200)&& (this.responseText != null)){
+        {
+          var arrayOfStrings = this.responseText.split(":");
+        }
+      }
+    }
+    request.open("GET", "ajax_flame" + nocache, true);
+    request.send(null);
+    setTimeout('GetFlameState()', 1000);
+  }
+
+  function Led_R(){
+    value = document.getElementById("led_R").value;
+
+    var request = new XMLHttpRequest();
+    request.open("GET", "\setpin?pin=3?value=" + value , false);
+    request.send(null);
+  }
+  function Led_G(){
+    value = document.getElementById("led_G").value;
+
+    var request = new XMLHttpRequest();
+    request.open("GET", "\setpin?pin=5?value=" + value , false);
+    request.send(null);
+  }
+  function Led_B(){
+    value = document.getElementById("led_B").value;
+
+    var request = new XMLHttpRequest();
+    request.open("GET", "\setpin?pin=6?value=" + value , false);
+    request.send(null);
+  }
+
+  </script>
+
+</head>
+
+<body onload="GetFlameState()">
+  <div class="form">
+    <h2 align ="center">LED RGB</h2>
+
+    <center>
+      <br>
+
+      <h3>Choix des couleurs</h3>
+      <span class='test'>  tg</span>
+      <input type="range" min="0" max="255" id="led_R" step="1.00" oninput="Led_R()" value="0" ><br>
+      <input type="range" min="0" max="255" id="led_G" step="1.00" oninput="Led_G()" value="0" ><br>
+      <input type="range" min="0" max="255" id="led_B" step="1.00" oninput="Led_B()" value="0" >
+    </center>
+  </div>
+</Body>
+</html>
