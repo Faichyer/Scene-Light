@@ -49,17 +49,17 @@
 
 <body onload="GetFlameState()">
   <div class="form">
-    <h2 align ="center">LED RGB</h2>
+    <h2 align ="center">Led RGB</h2>
 
-    <center>
+    
       <br>
 
-      <h3>Choix des couleurs</h3>
-      <span class='test'>  tg</span>
-      <input type="range" min="0" max="255" id="led_R" step="1.00" oninput="Led_R()" value="0" ><br>
-      <input type="range" min="0" max="255" id="led_G" step="1.00" oninput="Led_G()" value="0" ><br>
-      <input type="range" min="0" max="255" id="led_B" step="1.00" oninput="Led_B()" value="0" >
-    </center>
+      <h3 align ="center">Choix des couleurs</h3>
+	<div class="Ranges">
+		<span class='indicateur_barres'>R </span><input type="range" min="0" max="255" id="led_R" step="1.00" oninput="Led_R()" value="0" ><br><br>
+		<span class='indicateur_barres'>G </span><input type="range" min="0" max="255" id="led_G" step="1.00" oninput="Led_G()" value="0" ><br><br>
+		<span class='indicateur_barres'>B </span><input type="range" min="0" max="255" id="led_B" step="1.00" oninput="Led_B()" value="0" >
+	</div>	
   </div>
 </Body>
 </html>
