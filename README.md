@@ -1,5 +1,5 @@
-# LedRGB
-Scene Light project
+# Scene Light
+RGB Scene Light project
 
 An RGB scene light project made my 4 sophomore student.
 It is composed of some features : 
